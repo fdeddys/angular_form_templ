@@ -1,0 +1,25 @@
+<!-- <p>product works!</p> -->
+<div style="padding: 20px; " class="center" >
+    <table>
+        <thead>
+            <tr>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prod of products" >
+                <td>{{prod.kode }}</td>
+                <td>{{prod.name }}</td>
+                <td>
+                    <button type="button" (click)="gotoEditPage(prod.kode)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button type="button" (click)="addNew()">Addnew</button>
+</div>
+
+<!-- {{ products | json}} -->

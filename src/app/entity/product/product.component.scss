@@ -1,0 +1,17 @@
+table, th, td {
+    border: 1px solid black; 
+    float:center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

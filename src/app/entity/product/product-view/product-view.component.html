@@ -1,0 +1,55 @@
+
+
+<!-- {{ products | json}} -->
+<!-- {{ code }} -->
+<!-- {{curProduct | json}} -->
+<!-- {{ editIdx}} -->
+
+<form [formGroup]="prodForm"  (ngSubmit)="onSubmit()" >
+    <p>Add or Edit Page</p>
+    <table>
+        <tr>
+            <td>
+                <label >Kode</label>
+            </td>
+            <td>
+                <input type="text" formControlName="kode" class="form-control"   >
+            </td>
+            <td>
+                <div *ngIf="prodForm.controls['kode'].invalid && (prodForm.controls['kode'].dirty || prodForm.controls['kode'].touched)" >
+                    <div *ngIf="prodForm.controls['kode'].errors.required">
+                    Kode is required.
+                  </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label >Name </label>
+            </td>
+            <td>
+                <input type="text" formControlName="name" class="form-control"  >
+            </td>
+            <td>
+                <div *ngIf="prodForm.controls['name'].invalid && (prodForm.controls['name'].dirty || prodForm.controls['name'].touched)" >
+                    <div *ngIf="prodForm.controls['name'].errors.required">
+                    Name is required.
+                  </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit"
+                [disabled]="prodForm.pristine || prodForm.invalid" class="btn btn-success">Save</button>
+            </td>
+            <td>
+                <button type="button" (click)="backBtn()">Back</button>
+            </td>
+        </tr>
+    </table>
+ 
+</form>
+
+
