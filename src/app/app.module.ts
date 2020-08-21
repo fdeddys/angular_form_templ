@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { EntityModule } from './entity/entity.module';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    // BrowserModule,
+    // BrowserModule.withServerTransition({appId: 'ssr-stock'}),
+    CommonModule,
     FormsModule,
     AppRoutingModule,
     NgxWebstorageModule.forRoot(),
