@@ -98,7 +98,7 @@ export class ProductViewComponent implements OnInit {
         if (this.editIdx === -1 ) {
             this.products.push(currProd);
         } else {
-            // this.products[this.editIdx].kode = currProd.kode;
+            this.products[this.editIdx].kode = currProd.kode;
             this.products[this.editIdx].name = currProd.name;
         }
         this.productService.saveData(this.products);
